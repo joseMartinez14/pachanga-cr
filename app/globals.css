@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Minimalistic Color Palette */
+    --background: 0 0% 100%;           /* #FFFFFF - Clean white */
+    --surface: 0 0% 97%;               /* #F7F7F8 - Light neutral gray */
+    --text-primary: 0 0% 12%;          /* #1E1E1E - Almost black */
+    --text-secondary: 215 16% 47%;     /* #6C757D - Medium gray */
+    --primary-accent: 214 100% 65%;    /* #4D96FF - Calm blue */
+    --secondary-accent: 0 73% 70%;     /* #FF6B6B - Soft coral */
+    --success: 135 47% 60%;            /* #6BCB77 - Fresh green */
+
+    /* Legacy mappings for compatibility */
+    --foreground: var(--text-primary);
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--background);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--primary-accent);
+    --primary-foreground: var(--background);
+    --secondary: var(--surface);
+    --secondary-foreground: var(--text-primary);
+    --muted: var(--surface);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--surface);
+    --accent-foreground: var(--text-primary);
+    --destructive: var(--secondary-accent);
+    --destructive-foreground: var(--background);
+    --border: 0 0% 90%;
+    --input: var(--surface);
+    --ring: var(--primary-accent);
+    --radius: 0.75rem;
+  }
+
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    overflow-x: hidden;
+    background: hsl(var(--background));
+    color: hsl(var(--text-primary));
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Minimal animations for smooth interactions */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Clean Button Styles */
+.btn-primary {
+  @apply inline-flex items-center justify-center px-6 py-3 text-sm font-medium rounded-xl;
+  @apply transition-all duration-200 ease-in-out;
+  background: hsl(var(--primary-accent));
+  color: hsl(var(--background));
+}
+
+.btn-primary:hover {
+  @apply shadow-lg transform -translate-y-0.5;
+  background: hsl(var(--primary-accent) / 0.9);
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center px-6 py-3 text-sm font-medium rounded-xl;
+  @apply transition-all duration-200 ease-in-out border;
+  background: hsl(var(--background));
+  color: hsl(var(--text-primary));
+  border-color: hsl(var(--border));
+}
+
+.btn-secondary:hover {
+  @apply shadow-md transform -translate-y-0.5;
+  background: hsl(var(--surface));
+}
+
+/* Card Styles */
+.card {
+  @apply rounded-2xl p-6 transition-all duration-200;
+  background: hsl(var(--surface));
+  border: 1px solid hsl(var(--border));
+}
+
+.card:hover {
+  @apply shadow-lg transform -translate-y-1;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.card-interactive {
+  @apply cursor-pointer;
+}
+
+/* Game Mode Accent Classes */
+.accent-couple {
+  color: hsl(var(--secondary-accent));
+}
+
+.accent-party {
+  color: hsl(var(--primary-accent));
+}
+
+.accent-trivia {
+  color: hsl(var(--success));
+}
+
+/* Typography */
+.text-primary {
+  color: hsl(var(--text-primary));
+}
+
+.text-secondary {
+  color: hsl(var(--text-secondary));
+}
+
+/* Animations */
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out;
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out;
+}
+
+/* PWA specific styles */
+@media (display-mode: standalone) {
+  body {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+  }
+}
+
+/* Responsive spacing */
+.container-game {
+  @apply container mx-auto px-6 py-8 max-w-lg;
+}
+
+/* Safe area for mobile devices */
+@supports (padding: max(0px)) {
+  .safe-area-top {
+    padding-top: max(1.5rem, env(safe-area-inset-top));
+  }
+
+  .safe-area-bottom {
+    padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
+  }
+}
+
+/* Focus states for accessibility */
+.focus-outline {
+  @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary;
+}

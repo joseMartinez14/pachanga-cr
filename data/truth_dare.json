@@ -1,0 +1,122 @@
+[
+  {
+    "id": "td_001",
+    "type": "truth",
+    "intensity": "PG",
+    "text": "What's the most embarrassing thing you've done in public?"
+  },
+  {
+    "id": "td_002",
+    "type": "dare",
+    "intensity": "PG",
+    "text": "Do your best impression of your favorite movie character."
+  },
+  {
+    "id": "td_003",
+    "type": "truth",
+    "intensity": "PG",
+    "text": "What's your biggest fear that you've never told anyone?"
+  },
+  {
+    "id": "td_004",
+    "type": "dare",
+    "intensity": "PG",
+    "text": "Sing your favorite song as dramatically as possible."
+  },
+  {
+    "id": "td_005",
+    "type": "truth",
+    "intensity": "PG",
+    "text": "What's the weirdest dream you can remember having?"
+  },
+  {
+    "id": "td_006",
+    "type": "dare",
+    "intensity": "Romantic",
+    "text": "Tell your partner three things you love most about them."
+  },
+  {
+    "id": "td_007",
+    "type": "truth",
+    "intensity": "Romantic",
+    "text": "What was your first impression of your partner?"
+  },
+  {
+    "id": "td_008",
+    "type": "dare",
+    "intensity": "Romantic",
+    "text": "Give your partner a 2-minute shoulder massage."
+  },
+  {
+    "id": "td_009",
+    "type": "truth",
+    "intensity": "Romantic",
+    "text": "What's your favorite memory of us together?"
+  },
+  {
+    "id": "td_010",
+    "type": "dare",
+    "intensity": "Romantic",
+    "text": "Write a short love note to your partner and read it aloud."
+  },
+  {
+    "id": "td_011",
+    "type": "truth",
+    "intensity": "Spicy",
+    "text": "What's something you've always wanted to try but been too shy to ask?"
+  },
+  {
+    "id": "td_012",
+    "type": "dare",
+    "intensity": "Spicy",
+    "text": "Give your partner a sensual kiss on their neck."
+  },
+  {
+    "id": "td_013",
+    "type": "truth",
+    "intensity": "Spicy",
+    "text": "What's your biggest romantic fantasy?"
+  },
+  {
+    "id": "td_014",
+    "type": "dare",
+    "intensity": "Spicy",
+    "text": "Blindfold your partner and feed them something sweet."
+  },
+  {
+    "id": "td_015",
+    "type": "truth",
+    "intensity": "Spicy",
+    "text": "What's the most romantic thing someone could do for you?"
+  },
+  {
+    "id": "td_016",
+    "type": "dare",
+    "intensity": "PG",
+    "text": "Dance to an imaginary song for 30 seconds."
+  },
+  {
+    "id": "td_017",
+    "type": "truth",
+    "intensity": "PG",
+    "text": "What's your most irrational phobia?"
+  },
+  {
+    "id": "td_018",
+    "type": "dare",
+    "intensity": "PG",
+    "text": "Try to lick your own elbow."
+  },
+  {
+    "id": "td_019",
+    "type": "truth",
+    "intensity": "Romantic",
+    "text": "What song reminds you most of your partner?"
+  },
+  {
+    "id": "td_020",
+    "type": "dare",
+    "intensity": "Spicy",
+    "text": "Whisper something sweet and seductive in your partner's ear."
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "id": "dp_001",
+    "category": "never_have_i_ever",
+    "intensity": "PG",
+    "text": "Never have I ever eaten a whole pizza by myself"
+  },
+  {
+    "id": "dp_002",
+    "category": "never_have_i_ever",
+    "intensity": "PG",
+    "text": "Never have I ever forgotten someone's name immediately after being introduced"
+  },
+  {
+    "id": "dp_003",
+    "category": "never_have_i_ever",
+    "intensity": "18+",
+    "text": "Never have I ever had a one-night stand"
+  },
+  {
+    "id": "dp_004",
+    "category": "never_have_i_ever",
+    "intensity": "18+",
+    "text": "Never have I ever called in sick when I wasn't actually sick"
+  },
+  {
+    "id": "dp_005",
+    "category": "never_have_i_ever",
+    "intensity": "PG",
+    "text": "Never have I ever fallen asleep during a movie in a theater"
+  },
+  {
+    "id": "dp_006",
+    "category": "most_likely_to",
+    "intensity": "PG",
+    "text": "Most likely to become famous on social media"
+  },
+  {
+    "id": "dp_007",
+    "category": "most_likely_to",
+    "intensity": "PG",
+    "text": "Most likely to survive a zombie apocalypse"
+  },
+  {
+    "id": "dp_008",
+    "category": "most_likely_to",
+    "intensity": "18+",
+    "text": "Most likely to get married first"
+  },
+  {
+    "id": "dp_009",
+    "category": "most_likely_to",
+    "intensity": "PG",
+    "text": "Most likely to become a millionaire"
+  },
+  {
+    "id": "dp_010",
+    "category": "most_likely_to",
+    "intensity": "18+",
+    "text": "Most likely to get arrested for something silly"
+  },
+  {
+    "id": "dp_011",
+    "category": "waterfall",
+    "intensity": "PG",
+    "text": "Waterfall! Everyone drinks until the person who drew this card stops"
+  },
+  {
+    "id": "dp_012",
+    "category": "waterfall",
+    "intensity": "18+",
+    "text": "Categories: Name types of alcohol. First person who can't thinks of one drinks"
+  },
+  {
+    "id": "dp_013",
+    "category": "waterfall",
+    "intensity": "PG",
+    "text": "Rhyme Time: Say a word, everyone must rhyme. First to fail drinks"
+  },
+  {
+    "id": "dp_014",
+    "category": "king_cup",
+    "intensity": "PG",
+    "text": "Question Master: Ask questions. Anyone who answers directly drinks"
+  },
+  {
+    "id": "dp_015",
+    "category": "king_cup",
+    "intensity": "18+",
+    "text": "Make a Rule: Create a rule everyone must follow. Breaking it = drink"
+  }
+]
