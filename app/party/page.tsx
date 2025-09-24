@@ -4,7 +4,7 @@ import { ensureProfile } from "@/lib/profiles";
 import PartyPageClient from "./PartyPageClient";
 
 export default async function PartyPage() {
-  const { userId } = auth();
+  const { userId } = await auth();
   if (!userId) {
     redirect("/sign-in");
   }

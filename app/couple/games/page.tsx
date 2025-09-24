@@ -7,15 +7,22 @@ import { BackButton } from "@/components/BackButton";
 
 export default function CoupleGamesPage() {
   const searchParams = useSearchParams();
-  const intensity = searchParams?.get("intensity") || "PG";
+  const intensity = searchParams?.get("intensity") || "light";
 
   const games = [
+    {
+      id: "random",
+      title: "Random Game",
+      description: "Let us pick a surprise game for you",
+      emoji: "🎲",
+      href: `/couple/play?intensity=${intensity}&game=random`
+    },
     {
       id: "truth_dare",
       title: "Truth or Dare",
       description: "Classic truth or dare with romantic twists",
       emoji: "🤔",
-      href: `/couple/spinner?intensity=${intensity}`
+      href: `/couple/play?intensity=${intensity}&game=truth_dare`
     },
     {
       id: "couple_quiz",
@@ -41,9 +48,10 @@ export default function CoupleGamesPage() {
   ];
 
   const intensityColors = {
-    "PG": "bg-green-50 text-green-700 border-green-200",
-    "Romantic": "bg-rose-50 text-rose-700 border-rose-200",
-    "Spicy": "bg-red-50 text-red-700 border-red-200"
+    "light": "bg-green-50 text-green-700 border-green-200",
+    "medium": "bg-blue-50 text-blue-700 border-blue-200",
+    "heavy": "bg-rose-50 text-rose-700 border-rose-200",
+    "explicit": "bg-red-50 text-red-700 border-red-200"
   };
 
   return (

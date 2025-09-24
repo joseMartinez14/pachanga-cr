@@ -16,22 +16,28 @@ export default function CoupleIntensityPage() {
     emoji: string;
   }> = [
     {
-      value: "PG",
-      label: "PG - Playful",
+      value: "light",
+      label: "Light",
       description: "Fun and lighthearted questions and dares",
       emoji: "😊"
     },
     {
-      value: "Romantic",
-      label: "Romantic",
+      value: "medium",
+      label: "Medium",
       description: "Sweet and loving activities for couples",
       emoji: "💕"
     },
     {
-      value: "Spicy",
-      label: "Spicy",
+      value: "heavy",
+      label: "Heavy",
       description: "More intimate and passionate challenges",
       emoji: "🔥"
+    },
+    {
+      value: "explicit",
+      label: "Explicit",
+      description: "Intense and very intimate experiences",
+      emoji: "🌶️"
     }
   ];
 
@@ -119,7 +125,7 @@ export default function CoupleIntensityPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <Link href={`/couple/spinner?intensity=${selectedIntensity}`}>
+            <Link href={`/couple/games?intensity=${selectedIntensity}`}>
               <motion.button
                 className="w-full btn-primary"
                 whileHover={{ y: -1 }}

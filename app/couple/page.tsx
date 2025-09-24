@@ -4,7 +4,7 @@ import { ensureProfile } from "@/lib/profiles";
 import CouplePageClient from "./CouplePageClient";
 
 export default async function CouplePage() {
-  const { userId } = auth();
+  const { userId } = await auth();
   if (!userId) {
     redirect("/sign-in");
   }

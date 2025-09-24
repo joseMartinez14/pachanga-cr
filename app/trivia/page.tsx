@@ -4,7 +4,7 @@ import { ensureProfile } from "@/lib/profiles";
 import TriviaPageClient from "./TriviaPageClient";
 
 export default async function TriviaPage() {
-  const { userId } = auth();
+  const { userId } = await auth();
   if (!userId) {
     redirect("/sign-in");
   }

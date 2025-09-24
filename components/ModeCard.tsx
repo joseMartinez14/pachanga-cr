@@ -33,7 +33,7 @@ export function ModeCard({ title, description, accent, emoji, className, index =
         transition: { duration: 0.2 }
       }}
       className={cn(
-        "card card-interactive group",
+        "card card-interactive group pb-4",
         className
       )}
     >

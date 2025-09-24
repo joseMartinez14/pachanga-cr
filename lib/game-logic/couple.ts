@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const CoupleIntensitySchema = z.enum(["PG", "Romantic", "Spicy"]);
+export const CoupleIntensitySchema = z.enum(["light", "medium", "heavy", "explicit"]);
 export type CoupleIntensity = z.infer<typeof CoupleIntensitySchema>;
 
 export interface TruthDareCard {
@@ -26,13 +26,16 @@ export function filterCardsByIntensity(
   cards: TruthDareCard[],
   intensity: CoupleIntensity
 ): TruthDareCard[] {
-  if (intensity === "Spicy") {
+  if (intensity === "explicit") {
     return cards;
   }
-  if (intensity === "Romantic") {
-    return cards.filter(c => c.intensity !== "Spicy");
+  if (intensity === "heavy") {
+    return cards.filter(c => c.intensity !== "explicit");
   }
-  return cards.filter(c => c.intensity === "PG");
+  if (intensity === "medium") {
+    return cards.filter(c => c.intensity !== "explicit" && c.intensity !== "heavy");
+  }
+  return cards.filter(c => c.intensity === "light");
 }
 
 export function getRandomCard(
@@ -54,9 +57,10 @@ export function calculateCouplePoints(
   let basePoints = completed ? 10 : -5;
 
   const intensityMultiplier = {
-    PG: 1,
-    Romantic: 1.5,
-    Spicy: 2
+    light: 1,
+    medium: 1.5,
+    heavy: 2,
+    explicit: 2.5
   };
 
   const streakBonus = Math.min(streak, 5) * 2;

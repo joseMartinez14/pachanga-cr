@@ -5,7 +5,7 @@ import { supabaseAdmin } from "./supabaseAdmin";
 import { GameMode } from "./schemas/intensity";
 
 export async function createRoom(mode: GameMode) {
-  const { userId } = auth();
+  const { userId } = await auth();
   if (!userId) throw new Error("Unauthorized");
 
   const { data, error } = await supabaseAdmin
@@ -27,7 +27,7 @@ export async function createRoom(mode: GameMode) {
 }
 
 export async function joinRoom(roomId: string, displayName: string) {
-  const { userId } = auth();
+  const { userId } = await auth();
   if (!userId) throw new Error("Unauthorized");
 
   const { data, error } = await supabaseAdmin
@@ -46,7 +46,7 @@ export async function joinRoom(roomId: string, displayName: string) {
 }
 
 export async function startRound(roomId: string, payload: any) {
-  const { userId } = auth();
+  const { userId } = await auth();
   if (!userId) throw new Error("Unauthorized");
 
   // Verify user is in the room
@@ -74,7 +74,7 @@ export async function startRound(roomId: string, payload: any) {
 }
 
 export async function updateScore(roomId: string, points: number) {
-  const { userId } = auth();
+  const { userId } = await auth();
   if (!userId) throw new Error("Unauthorized");
 
   const { data, error } = await supabaseAdmin

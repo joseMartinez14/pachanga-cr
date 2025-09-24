@@ -9,8 +9,14 @@ export const metadata: Metadata = {
   title: "Party & Couple Games",
   description: "Mobile-friendly party and couple game hub",
   manifest: "/manifest.json",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
   themeColor: "#000000",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",
 };
 
 export default function RootLayout({

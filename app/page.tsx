@@ -35,12 +35,12 @@ export default function HomePage() {
 
         {/* Game Mode Cards */}
         <motion.div
-          className="space-y-4 mb-12"
+          className="space-y-6 mb-12"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <Link href="/couple">
+          <Link href="/couple" className="block">
             <ModeCard
               title="Couple Mode"
               description="Truth or Dare, quizzes, and romantic games for two"
@@ -50,7 +50,7 @@ export default function HomePage() {
             />
           </Link>
 
-          <Link href="/party">
+          <Link href="/party" className="block">
             <ModeCard
               title="Party Mode"
               description="Drinking games, charades, and group challenges"
@@ -60,7 +60,7 @@ export default function HomePage() {
             />
           </Link>
 
-          <Link href="/trivia">
+          <Link href="/trivia" className="block">
             <ModeCard
               title="Trivia Mode"
               description="Test your knowledge with various categories"
